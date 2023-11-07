@@ -1,0 +1,22 @@
+{% extends 'catalog/base_generic.html' %}
+
+{% block content %}
+    <h1>Author List</h1>
+    {% if author_list %}
+        <ul>
+            {% for author in author_list %}
+                <li>
+                    <!-- <a href="{% url 'catalog:author-detail' author.id %}"> -->
+                    <a href="{{ author.get_absolute_url }}">
+                        {{ author.last_name}}, {{author.first_name}}
+                        {% if author.birthday %} 
+                            ({{ author.date_of_birth }} - {{ author.date_of_death }})
+                        {% endif %}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no authors.</p>
+    {% endif %}
+{% endblock %}
