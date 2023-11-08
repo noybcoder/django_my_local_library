@@ -159,6 +159,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # https://whitenoise.readthedocs.io/en/stable/django.html#add-compression-and-caching-support
 STORAGES = {
     'staticfiles': {
-        'BACKEND': 'whitenoise.storage.CompressManifestStaticFilesStorage',
+        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
     }
 }
