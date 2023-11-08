@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.get_env('GDATABASE'),
-        'USER': os.get_env('PGUSER'),
-        'PASSWORD': os.get_env('PGPASSWORD'),
-        'HOST': os.get_env('PGHOST'),
-        'PORT': os.get_env('PGPORT'),
+        'NAME': os.getenv('GDATABASE'),
+        'USER': os.getenv('PGUSER'),
+        'PASSWORD': os.getenv('PGPASSWORD'),
+        'HOST': os.getenv('PGHOST'),
+        'PORT': os.getenv('PGPORT'),
         # 'NAME': os.getenv('DJANGO_DB_NAME'),
         # 'PASSWORD': os.getenv('DJANGO_DB_PASSWORD'),
         # 'HOST': os.getenv('DJANGO_DB_HOST'),
